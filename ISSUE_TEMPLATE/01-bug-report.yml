@@ -1,0 +1,74 @@
+name: Segnala un bug
+description: Segnala una funzione che non si comporta come previsto.
+title: "[Bug] "
+labels: ["bug"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Prima di inviare, cerca se il problema è già stato segnalato.
+        Non inserire password, token o dati personali.
+        Per vulnerabilità di sicurezza, segui la policy del progetto
+        ed evita di pubblicare dettagli in una issue pubblica.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Descrizione del problema
+      description: Descrivi in modo chiaro cosa non funziona.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Passaggi per riprodurre il problema
+      description: Indica i passaggi o un esempio minimo riproducibile.
+      placeholder: |
+        1. Aprire...
+        2. Selezionare...
+        3. Osservare...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Comportamento atteso
+      description: Cosa dovrebbe succedere?
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Comportamento osservato
+      description: Cosa succede invece? Riporta eventuali messaggi di errore.
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Versione
+      description: Versione dell'app, release o commit, se conosciuti.
+      placeholder: "Es. v1.2.3"
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Ambiente
+      description: Indica sistema operativo, browser o dispositivo pertinenti.
+      placeholder: |
+        Sistema operativo:
+        Browser e versione:
+        Dispositivo:
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Screenshot, log e altre informazioni
+      description: |
+        Aggiungi eventuali allegati, frequenza del problema o soluzioni
+        temporanee. Rimuovi dati sensibili da immagini e log.

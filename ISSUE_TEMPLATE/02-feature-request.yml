@@ -1,0 +1,54 @@
+name: Richiedi una feature
+description: Proponi una nuova funzionalità o un miglioramento.
+title: "[Feature] "
+labels: ["enhancement"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Prima di inviare, cerca se esiste già una richiesta simile.
+        Descrivi prima l'esigenza, poi la soluzione proposta.
+        Non inserire password, token o dati personali.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Esigenza o problema da risolvere
+      description: |
+        Quale attività oggi è impossibile, difficile o poco pratica?
+        Indica chi beneficerebbe del miglioramento.
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Soluzione proposta
+      description: Descrivi il comportamento che vorresti ottenere.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternative considerate
+      description: |
+        Hai valutato altre soluzioni o modi per ottenere lo stesso
+        risultato con le funzioni esistenti?
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Risultato atteso e criteri di accettazione
+      description: Come potremmo verificare che la richiesta sia soddisfatta?
+      placeholder: |
+        - L'utente può...
+        - Quando..., il sistema...
+        - Le funzioni esistenti continuano a...
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Altre informazioni
+      description: Aggiungi esempi, screenshot, mockup o riferimenti utili.
